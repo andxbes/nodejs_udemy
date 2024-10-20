@@ -1,0 +1,44 @@
+version: "3"
+services:
+  udNodeJsDB:
+    image: docker.io/bitnami/mariadb:latest
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${DATABASE_NAME}
+      MARIADB_USER: ${DATABASE_USERNAME}
+      MARIADB_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - "mariadb_data:/bitnami/mariadb"
+      - "./db:/docker-entrypoint-initdb.d"
+    networks:
+      - udNodeJs
+
+  phpmyadmin:
+    image: bitnami/phpmyadmin:latest
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_USER: ${DATABASE_ROOT_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+      DATABASE_ALLOW_NO_PASSWORD: false
+      PHPMYADMIN_ALLOW_ARBITRARY_SERVER: yes
+    ports:
+      - "88:8080"
+    networks:
+      - udNodeJs
+    depends_on:
+      - udNodeJsDB
+
+volumes:
+  mariadb_data:
+    driver: local
+
+networks:
+  udNodeJs:
+    name: UDNodeJs
+    driver: bridge
