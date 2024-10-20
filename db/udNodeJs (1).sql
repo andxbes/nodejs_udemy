@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: udNodeJsDB:3306
--- Время создания: Окт 20 2024 г., 20:01
+-- Время создания: Окт 20 2024 г., 20:17
 -- Версия сервера: 11.1.2-MariaDB
 -- Версия PHP: 8.2.11
 
@@ -35,6 +35,13 @@ CREATE TABLE `cartItems` (
   `cartId` int(11) DEFAULT NULL,
   `productId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `cartItems`
+--
+
+INSERT INTO `cartItems` (`id`, `quantity`, `createdAt`, `updatedAt`, `cartId`, `productId`) VALUES
+(8, 1, '2024-10-20 20:17:01', '2024-10-20 20:17:01', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -72,6 +79,19 @@ CREATE TABLE `orderItems` (
   `productId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Дамп данных таблицы `orderItems`
+--
+
+INSERT INTO `orderItems` (`id`, `quantity`, `createdAt`, `updatedAt`, `orderId`, `productId`) VALUES
+(1, 2, '2024-10-20 20:14:40', '2024-10-20 20:14:40', 1, 1),
+(2, 1, '2024-10-20 20:14:40', '2024-10-20 20:14:40', 1, 2),
+(3, 1, '2024-10-20 20:14:58', '2024-10-20 20:14:58', 2, 1),
+(4, 1, '2024-10-20 20:14:58', '2024-10-20 20:14:58', 2, 3),
+(5, 1, '2024-10-20 20:16:57', '2024-10-20 20:16:57', 3, 1),
+(6, 1, '2024-10-20 20:16:57', '2024-10-20 20:16:57', 3, 2),
+(7, 1, '2024-10-20 20:16:57', '2024-10-20 20:16:57', 3, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -84,6 +104,15 @@ CREATE TABLE `orders` (
   `updatedAt` datetime NOT NULL,
   `userId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `orders`
+--
+
+INSERT INTO `orders` (`id`, `createdAt`, `updatedAt`, `userId`) VALUES
+(1, '2024-10-20 20:14:40', '2024-10-20 20:14:40', 1),
+(2, '2024-10-20 20:14:57', '2024-10-20 20:14:57', 1),
+(3, '2024-10-20 20:16:57', '2024-10-20 20:16:57', 1);
 
 -- --------------------------------------------------------
 
@@ -187,7 +216,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `cartItems`
 --
 ALTER TABLE `cartItems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `carts`
@@ -199,13 +228,13 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT для таблицы `orderItems`
 --
 ALTER TABLE `orderItems`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `products`
