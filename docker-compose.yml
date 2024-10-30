@@ -22,7 +22,7 @@ services:
     restart: unless-stopped
     env_file: .env
     environment:
-      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_HOST: udNodeJsDB
       DATABASE_USER: ${DATABASE_ROOT_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_ROOT_PASSWORD}
       DATABASE_ALLOW_NO_PASSWORD: false
