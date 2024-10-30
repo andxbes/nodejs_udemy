@@ -1,5 +1,26 @@
 version: "3"
 services:
+
+  mongodb:
+    image: 'bitnami/mongodb:latest'
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MONGODB_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+      MONGODB_DATABASE: ${DATABASE_NAME}
+      MONGODB_USERNAME: ${DATABASE_USERNAME}
+      MONGODB_PASSWORD: ${DATABASE_PASSWORD}
+      MONGODB_DEFAULT_PORT_NUMBER: ${MONGODB_DEFAULT_PORT_NUMBER}
+    volumes:
+      - "mongodb_data:/bitnami/mongodb"
+      - "./db/mongo:/docker-entrypoint-initdb.d"
+    networks:
+      - udNodeJs
+    ports:
+      - "${MONGODB_DEFAULT_PORT_NUMBER}:${MONGODB_DEFAULT_PORT_NUMBER}"
+
+
+
   udNodeJsDB:
     image: docker.io/bitnami/mariadb:latest
     restart: unless-stopped
@@ -13,7 +34,7 @@ services:
       - "3306:3306"
     volumes:
       - "mariadb_data:/bitnami/mariadb"
-      - "./db:/docker-entrypoint-initdb.d"
+      - "./db/mysql:/docker-entrypoint-initdb.d"
     networks:
       - udNodeJs
 
@@ -36,6 +57,8 @@ services:
 
 volumes:
   mariadb_data:
+    driver: local
+  mongodb_data:
     driver: local
 
 networks:
