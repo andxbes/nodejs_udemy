@@ -1,26 +1,27 @@
-// const mysql = require('mysql2');
-require('dotenv').config();
+const mongodb = require('mongodb');
 
-// const pool = mysql.createPool({
-//     host: process.env.DATABASE_HOST,
-//     user: process.env.DATABASE_USERNAME,
-//     database: process.env.DATABASE_NAME,
-//     password: process.env.DATABASE_PASSWORD
-// });
+let _db;
 
-// module.exports = pool.promise();
+const mongoConnect = (callback) => {
+  const MongoClient = mongodb.MongoClient;
+  MongoClient.connect('mongodb://udNodeJs:udNodeJs@localhost:27017/udNodeJs?authSource=udNodeJs')
+    .then((client) => {
+      console.info('MongoDB Connected !!!');
+      _db = client.db();
+      callback();
+    })
+    .catch((err) => {
+      console.error(err);
+      throw err;
+    });
+};
 
-const { Sequelize } = require('sequelize');
-
-
-const sequelize = new Sequelize(
-  process.env.DATABASE_NAME,
-  process.env.DATABASE_USERNAME,
-  process.env.DATABASE_PASSWORD,
-  {
-    dialect: 'mysql',
-    host: process.env.DATABASE_HOST
+const getDb = () => {
+  if (_db) {
+    return _db;
   }
-);
+  throw 'No database found!';
+};
 
-module.exports = sequelize;
+exports.mongoConnect = mongoConnect;
+exports.getDb = getDb;
