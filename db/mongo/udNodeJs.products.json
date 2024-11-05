@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "6727919f1e9285f50d8dde99"
+  },
+  "title": "Test Product",
+  "price": "19.94",
+  "description": "test",
+  "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+},
+{
+  "_id": {
+    "$oid": "672791b51e9285f50d8dde9a"
+  },
+  "title": "Test Product 2",
+  "price": "19.98",
+  "description": "test",
+  "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+},
+{
+  "_id": {
+    "$oid": "672791bb1e9285f50d8dde9b"
+  },
+  "title": "Test Product 3",
+  "price": "19.99",
+  "description": "test",
+  "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+},
+{
+  "_id": {
+    "$oid": "672a6c4a0431f08e28a92a04"
+  },
+  "title": "Test Product",
+  "price": "19.98",
+  "description": "test",
+  "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+  "id": "6727919f1e9285f50d8dde99"
+},
+{
+  "_id": {
+    "$oid": "672a7374985ff67073696a78"
+  },
+  "title": "hjgfhgfh",
+  "price": "9.11",
+  "description": "descript",
+  "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+}]

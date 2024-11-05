@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "5baa2528563f16379fc8a610"
+  },
+  "name": "Andrey",
+  "email": "andrey@test.com",
+  "cart": {
+    "items": []
+  }
+}]
