@@ -14,9 +14,10 @@ class Product {
     const db = getDb();
     let dbOp;
     if (this._id) {
+      const { _id, ...updatedFields } = this;
       dbOp = db
         .collection('products')
-        .updateOne({ _id: mongodb.ObjectId.createFromHexString(this._id) }, { $set: this });
+        .updateOne({ _id: mongodb.ObjectId.createFromHexString(_id) }, { $set: updatedFields });
     } else {
       dbOp = db.collection('products').insertOne(this);
     }
