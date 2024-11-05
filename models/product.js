@@ -58,6 +58,12 @@ class Product {
       });
   }
 
+  static deleteById(id) {
+    return getDb()
+      .collection('products')
+      .deleteOne({ _id: mongodb.ObjectId.createFromHexString(id) });
+  }
+
 }
 
 module.exports = Product;
