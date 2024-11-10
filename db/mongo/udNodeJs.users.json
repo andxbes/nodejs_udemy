@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6730d569fbd4313c8df29b03"
+  },
+  "name": "andxbes",
+  "email": "andxbes@test.com",
+  "cart": {
+    "items": [
+      {
+        "productId": {
+          "$oid": "6730d726abd6213af254aafa"
+        },
+        "quantity": 1,
+        "_id": {
+          "$oid": "6730eaa3baa40688527f070c"
+        }
+      },
+      {
+        "productId": {
+          "$oid": "6730d9161941ddfd65ffb4da"
+        },
+        "quantity": 1,
+        "_id": {
+          "$oid": "6730eaafbaa40688527f073d"
+        }
+      }
+    ]
+  },
+  "__v": 3,
+  "updatedAt": {
+    "$date": "2024-11-10T17:01:43.120Z"
+  }
+}]

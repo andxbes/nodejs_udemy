@@ -1,0 +1,137 @@
+[{
+  "_id": {
+    "$oid": "6730e8109b81eaaeee43afb6"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "6730d726abd6213af254aafa"
+        },
+        "title": "Test Product",
+        "price": 19.99,
+        "description": "Test description 2",
+        "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+        "userId": {
+          "$oid": "6730d569fbd4313c8df29b03"
+        },
+        "__v": 0
+      },
+      "quantity": 4,
+      "_id": {
+        "$oid": "6730e8109b81eaaeee43afb7"
+      }
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "6730d746abd6213af254ab06"
+        },
+        "title": "Test Product 3",
+        "price": 11.99,
+        "description": "werwerwerwr",
+        "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+        "userId": {
+          "$oid": "6730d569fbd4313c8df29b03"
+        },
+        "__v": 0
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "6730e8109b81eaaeee43afb8"
+      }
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "6730d9a9c03d9d079ed2ddcd"
+        },
+        "title": "Test Product 7",
+        "price": 19.99,
+        "description": "Test description 2",
+        "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+        "userId": {
+          "$oid": "6730d569fbd4313c8df29b03"
+        },
+        "__v": 0
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "6730e8109b81eaaeee43afb9"
+      }
+    }
+  ],
+  "user": {
+    "name": "andxbes",
+    "userId": {
+      "$oid": "6730d569fbd4313c8df29b03"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6730e81a9b81eaaeee43afce"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "6730d726abd6213af254aafa"
+        },
+        "title": "Test Product",
+        "price": 19.99,
+        "description": "Test description 2",
+        "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+        "userId": {
+          "$oid": "6730d569fbd4313c8df29b03"
+        },
+        "__v": 0
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "6730e81a9b81eaaeee43afcf"
+      }
+    }
+  ],
+  "user": {
+    "name": "andxbes",
+    "userId": {
+      "$oid": "6730d569fbd4313c8df29b03"
+    }
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6730ea94baa40688527f06f0"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "6730d735abd6213af254ab00"
+        },
+        "title": "Test Product 2",
+        "price": 24.99,
+        "description": "ewrwerwer",
+        "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+        "userId": {
+          "$oid": "6730d569fbd4313c8df29b03"
+        },
+        "__v": 0
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "6730ea94baa40688527f06f1"
+      }
+    }
+  ],
+  "user": {
+    "name": "andxbes",
+    "userId": {
+      "$oid": "6730d569fbd4313c8df29b03"
+    }
+  },
+  "__v": 0
+}]
