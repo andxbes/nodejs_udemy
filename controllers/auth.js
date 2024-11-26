@@ -11,14 +11,6 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-
-transporter.sendMail({
-  from: process.env.EMAIL_USER,
-  to: 'meyakal284@exoular.com',
-  subject: "Sending email using Nodemailer and OAuth 2.0",
-  text: "Sent!",
-});
-
 const User = require('../models/user');
 
 exports.getLogin = (req, res, next) => {
@@ -107,7 +99,7 @@ exports.postSignup = (req, res, next) => {
           res.redirect('/login');
           return transporter.sendMail({
             to: email,
-            from: 'shop@node-complete.com',
+            from: process.env.EMAIL_USER,
             subject: 'Signup succeeded!',
             html: '<h1>You successfully signed up!</h1>'
           });
