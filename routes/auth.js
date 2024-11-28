@@ -6,6 +6,9 @@ const User = require('../models/user');
 
 const router = express.Router();
 
+const minLength = 8;
+const passRegex = new RegExp(`^(?=.*[A-Za-z])(?=.*\\d)[^\\s]{${minLength},}$`);
+
 router.get('/login', authController.getLogin);
 
 router.get('/signup', authController.getSignup);
@@ -18,9 +21,9 @@ router.post(
       .withMessage('Please enter a valid email address.')
       .normalizeEmail(),
     body('password', 'Password has to be valid.')
-      .isLength({ min: 5 })
+      .isLength({ min: minLength })
       // .isAlphanumeric()
-      .matches(/^[^\s]+$/)
+      .matches(passRegex)
       .trim()
   ],
   authController.postLogin
@@ -50,9 +53,9 @@ router.post(
       'password',
       'Please enter a password with only numbers and text and at least 5 characters.'
     )
-      .isLength({ min: 5 })
+      .isLength({ min: minLength })
       // .isAlphanumeric()
-      .matches(/^[^\s]+$/)
+      .matches(passRegex)
       .trim(),
     body('confirmPassword')
       .trim()
